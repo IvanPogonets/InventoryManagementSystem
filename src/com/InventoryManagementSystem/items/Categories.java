@@ -1,9 +1,8 @@
-package com.InventoryManagementSystem;
+package com.InventoryManagementSystem.items;
 
 public enum Categories {
     ELECTRONICS("Electronics"),
     GROCERY("Grocery"),
-    FRAGILE("Fragile"),
     HOUSEHOLD("Household");
 private final String title;
 

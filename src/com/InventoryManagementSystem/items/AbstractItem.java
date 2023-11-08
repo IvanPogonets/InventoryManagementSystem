@@ -1,13 +1,24 @@
-package com.InventoryManagementSystem;
+package com.InventoryManagementSystem.items;
 
-import com.InventoryManagementSystem.Interfaces.Perishable;
-import com.InventoryManagementSystem.Interfaces.Sellable;
-import com.InventoryManagementSystem.Interfaces.Breakable;
-import com.InventoryManagementSystem.Interfaces.Item;
+import com.InventoryManagementSystem.Interfaces.*;
 
-public abstract class AbstractItem implements Item,
-        Perishable, Sellable {
-    public void checkBreakable() {
+public abstract class AbstractItem implements Item, Sellable, Categorizable {
+
+    public void setPrice(double price) {
 
     }
+
+    public  void showPrice(){
+
+    }
+
+    public void setCategory() {
+
+    }
+
+    public String getCategory() {
+return null;
+    }
+    public abstract String toString();
 }
+
