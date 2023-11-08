@@ -1,7 +1,7 @@
 package com.InventoryManagementSystem.Interfaces;
 
 public interface Item {
-    void itemDetails();
-    void calculateValue();
+    String getItemDetails();
+
     void displayDescription();
 }

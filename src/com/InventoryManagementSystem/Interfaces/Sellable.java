@@ -1,7 +1,7 @@
 package com.InventoryManagementSystem.Interfaces;
 
 public interface Sellable {
-    void getPrice();
+    double getPrice();
     void setPrice(double price);
 
 
