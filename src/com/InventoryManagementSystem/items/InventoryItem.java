@@ -3,6 +3,7 @@ package com.InventoryManagementSystem.items;
 public class InventoryItem extends AbstractItem {
     static long idCount = 0;
     long id;
+    Categories category;
     String name;
     boolean sellable = true;
     double quantity;
@@ -11,8 +12,22 @@ public class InventoryItem extends AbstractItem {
     String description;
 
 
+    public void setItem(String... data) {
+        idCount += 1;
+        this.id = idCount;
+        this.category = Categories.valueOf(data[0]);
+        this.name = data[1];
+        this.quantity = Double.parseDouble(data[2]);
+        this.unitsOfMeasurement = data[3];
+        this.price = Double.parseDouble(data[4]);
+        this.description = data[5];
+    }
+
     public double getPrice() {
         return price;
+    }
+
+    public void setPrice(double price) {
     }
 
     public long getId() {
@@ -23,16 +38,6 @@ public class InventoryItem extends AbstractItem {
     public String toString() {
         return id + "," + name + "," + sellable + "," + quantity
                 + "," + unitsOfMeasurement + "," + price + "," + description;
-    }
-
-    public void setNewItem(String... data) {
-        idCount += 1;
-        this.id = idCount;
-        this.name = data[0];
-        this.quantity = Double.parseDouble(data[1]);
-        this.unitsOfMeasurement = data[2];
-        this.price = Double.parseDouble(data[3]);
-        this.description = data[4];
     }
 
     public void setQuantity(int quantity) {
@@ -51,5 +56,9 @@ public class InventoryItem extends AbstractItem {
     public String getItemDetails() {
         return name + ", " + quantity + "," + unitsOfMeasurement +
                 "," + price + "," + description;
+    }
+
+    public void setCategory(Categories category) {
+        this.category = category;
     }
 }
